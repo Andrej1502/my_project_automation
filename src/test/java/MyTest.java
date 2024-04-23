@@ -1,6 +1,7 @@
 import lv.acodemy.page_object.AddStudentForm;
 import lv.acodemy.page_object.MainPage;
 import lv.acodemy.page_object.NotificationMessage;
+import lv.acodemy.utils.DriverManager;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,11 +12,11 @@ import org.testng.annotations.Test;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 
+import static lv.acodemy.utils.DriverManager.getDriver;
 
 
 public class MyTest {
 
-    ChromeDriver driver;
     MainPage mainPage;
     AddStudentForm addStudentForm;
     NotificationMessage notificationMessage;
@@ -23,13 +24,12 @@ public class MyTest {
 
     @BeforeMethod
     public void beforeTest() {
-        driver = new ChromeDriver();
-        driver.get(" http://acodemy-app-springboot-env.eba-pagku2yg.eu-north-1.elasticbeanstalk.com/");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        getDriver().get(" http://acodemy-app-springboot-env.eba-pagku2yg.eu-north-1.elasticbeanstalk.com/");
+        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-        mainPage = new MainPage(driver);
-        addStudentForm = new AddStudentForm(driver);
-        notificationMessage = new NotificationMessage(driver);
+        mainPage = new MainPage();
+        addStudentForm = new AddStudentForm();
+        notificationMessage = new NotificationMessage();
     }
     @Test
     public void addStudentTest() {

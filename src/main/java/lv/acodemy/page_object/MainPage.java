@@ -1,6 +1,7 @@
 package lv.acodemy.page_object;
 
 import lombok.Getter;
+import lv.acodemy.utils.DriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
@@ -11,11 +12,8 @@ import java.util.List;
 
 public class MainPage {
 
-    ChromeDriver driver;
-
-    public MainPage(ChromeDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    public MainPage() {
+        PageFactory.initElements(DriverManager.getDriver(), this);
     }
 
     @FindBy(how = How.ID, id = "addStudentButton")

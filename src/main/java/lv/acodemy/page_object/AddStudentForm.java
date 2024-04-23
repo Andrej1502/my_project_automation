@@ -1,6 +1,7 @@
 package lv.acodemy.page_object;
 
 import lombok.Getter;
+import lv.acodemy.utils.DriverManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
@@ -9,11 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AddStudentForm {
 
-    ChromeDriver driver;
-
-    public AddStudentForm(ChromeDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    public AddStudentForm() {
+        PageFactory.initElements(DriverManager.getDriver(), this);
     }
 
     @FindBy(how = How.ID, id = "name")

@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e5da5b9-99ab-453d-9c73-37d7710c725e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/AddStudentForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/NotificationMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/utils/DriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/AddStudentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/AddStudentForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Andrej1502"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Andrej1502/my_project_automation",
+    "accountId": "8bd5498e-a828-4bca-b6bc-f59a30346632"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -106,6 +109,19 @@
       <option name="presentableId" value="Default" />
       <updated>1713604154940</updated>
     </task>
+    <task id="LOCAL-00001" summary="my project automation">
+      <option name="closed" value="true" />
+      <created>1713864076599</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713864076599</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="my project automation" />
+    <option name="LAST_COMMIT_MESSAGE" value="my project automation" />
   </component>
 </project>
