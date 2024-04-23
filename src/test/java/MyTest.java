@@ -1,3 +1,4 @@
+import lombok.extern.java.Log;
 import lv.acodemy.page_object.AddStudentForm;
 import lv.acodemy.page_object.MainPage;
 import lv.acodemy.page_object.NotificationMessage;
@@ -14,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 import static lv.acodemy.utils.DriverManager.getDriver;
 
-
+@Log
 public class MyTest {
 
     MainPage mainPage;
@@ -35,7 +36,7 @@ public class MyTest {
     public void addStudentTest() {
 
         mainPage.getAddStudentButton().click();
-
+        log.info("New student registration");
         addStudentForm.registration("Kano", "Kano@inbox.lv", "OTHER");
         Assertions.assertThat(notificationMessage.getMessage().isEnabled()).isTrue();
     }
