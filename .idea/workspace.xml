@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e5da5b9-99ab-453d-9c73-37d7710c725e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/utils/ConfigurationProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/AddStudentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/AddStudentForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/page_object/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lv/acodemy/utils/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lv/acodemy/utils/DriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713865112687</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="my project automation">
+      <option name="closed" value="true" />
+      <created>1713941236772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713941236772</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
