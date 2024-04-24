@@ -2,6 +2,8 @@ package lv.acodemy.utils;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
+
 public class DriverManager {
 
     private static final ThreadLocal<ChromeDriver> driver = ThreadLocal.withInitial(ChromeDriver::new);
