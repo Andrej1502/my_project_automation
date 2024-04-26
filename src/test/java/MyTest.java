@@ -1,9 +1,8 @@
 import lombok.extern.java.Log;
-import lv.acodemy.page_object.AddStudentForm;
-import lv.acodemy.page_object.Constants;
-import lv.acodemy.page_object.MainPage;
-import lv.acodemy.page_object.NotificationMessage;
+import lv.acodemy.page_object.*;
+import lv.acodemy.utils.DriverManager;
 import org.assertj.core.api.Assertions;
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
@@ -17,6 +16,7 @@ public class MyTest {
     MainPage mainPage;
     AddStudentForm addStudentForm;
     NotificationMessage notificationMessage;
+    UpdateStudentForm updateStudentForm;
 
     @BeforeMethod
     public void beforeTest() {
@@ -26,6 +26,7 @@ public class MyTest {
         mainPage = new MainPage();
         addStudentForm = new AddStudentForm();
         notificationMessage = new NotificationMessage();
+        updateStudentForm = new UpdateStudentForm();
     }
     @Test
     public void addStudentTest() {
@@ -36,6 +37,10 @@ public class MyTest {
                 getConfiguration().getString("testPage.userEmail"),
                 getConfiguration().getString("testPage.userGender"));
         Assertions.assertThat(notificationMessage.getMessage().isEnabled()).isTrue();
+    }
+    @Test
+    public void updateInformation() {
+        mainPage.findStudentByNameAndUpdate("Kano");
     }
 }
 
