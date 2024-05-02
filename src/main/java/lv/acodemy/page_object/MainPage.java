@@ -21,11 +21,11 @@ public class MainPage {
     @Getter
     private WebElement addStudentButton;
 
-    @FindBy(how = How.CLASS_NAME, className = "//tbody//tr[@data-row-key]")
+    @FindBy(how = How.CLASS_NAME, className = "//tr[@data-row-key]//td[@class='ant-table-cell'][2]")
     @Getter
     List<WebElement> allNames;
 
-    private final By editInformationButton = By.xpath("//tbody//tr[@data-row-key]//span[text()='Edit']");
+    private final By editInformationButton = By.xpath("//tr[@data-row-key]//span[text()='Edit']");
 
     @FindBy(how = How.XPATH, xpath = "//li[@tabindex='0']")
     @Getter

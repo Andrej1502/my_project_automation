@@ -40,7 +40,7 @@ public class MyTest {
     }
     @Test
     public void updateInformation() {
-        mainPage.findStudentByNameAndUpdate("Kano");
+        mainPage.findStudentByNameAndUpdate("Rostik");
     }
 }
 
