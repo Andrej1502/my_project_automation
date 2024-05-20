@@ -21,7 +21,7 @@ public class MyTest {
     @BeforeMethod
     public void beforeTest() {
         getDriver().get(getConfiguration().getString(Constants.TEST_PAGE));
-        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 
         mainPage = new MainPage();
         addStudentForm = new AddStudentForm();
@@ -38,9 +38,17 @@ public class MyTest {
                 getConfiguration().getString("testPage.userGender"));
         Assertions.assertThat(notificationMessage.getMessage().isEnabled()).isTrue();
     }
+
     @Test
     public void updateInformation() {
-        mainPage.findStudentByNameAndUpdate("Kano");
+       mainPage.findStudentByNameAndUpdate("Kano");
+       updateStudentForm.updating("Kano522", "Kano522@gmail.com");
+       Assertions.assertThat(notificationMessage.getMessage().isEnabled()).isTrue();
+    }
+
+    @Test
+    public void deleteStudent() {
+        
     }
 }
 

@@ -7,7 +7,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 
@@ -21,27 +24,39 @@ public class MainPage {
     @Getter
     private WebElement addStudentButton;
 
-    @FindBy(how = How.CLASS_NAME, className = "//tr[@data-row-key]//td[@class='ant-table-cell'][2]")
+    @FindBy(how = How.XPATH, xpath = "//tbody[@class='ant-table-tbody']//tr[@data-row-key]//td[@class='ant-table-cell']")
     @Getter
     List<WebElement> allNames;
 
-    private final By editInformationButton = By.xpath("//tr[@data-row-key]//span[text()='Edit']");
+    private final By editInformationButton = By.xpath(".//parent::tr//span[text()='Edit']//parent::label");
 
-    @FindBy(how = How.XPATH, xpath = "//li[@tabindex='0']")
+    @FindBy(how = How.XPATH, xpath = "//li[@title='Next Page']")
     @Getter
-    List<WebElement> pagination;
+    private WebElement pagination;
+
+    private void waitForPageLoad() {
+        new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(7)).until(
+                ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody[@class='ant-table-tbody']//tr[@data-row-key]//td[@class='ant-table-cell']")));
+    }
 
     public void findStudentByNameAndUpdate(String editName) {
 
-        for (int i = 0; i < pagination.size(); i++) {
-            for (int j = 0; j < allNames.size(); j++) {
-                if (allNames.get(j).getText().contains(editName)) {
-                    allNames.get(j).findElement(editInformationButton).click();
+        for (int i = 0; i <= 53; i++) {
+            boolean found = false;
+
+            for (WebElement allName : allNames) {
+                if (allName.getText().contains(editName)) {
+                    allName.findElement(editInformationButton).click();
+                    found = true;
                     break;
                 }
-                }
-            getPagination().get(i).click();
+            }
+            if (found) {
+                break;
+            } else {
+                getPagination().click();
             }
         }
     }
+}
 

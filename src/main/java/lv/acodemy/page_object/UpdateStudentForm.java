@@ -18,10 +18,19 @@ public class UpdateStudentForm {
 
     @FindBy(how = How.ID, id = "email")
     @Getter
-    private WebElement clickEmail;
+    private WebElement updateEmail;
+
+    @FindBy(how = How.ID, id = "name")
+    @Getter
+    private WebElement updateName;
 
     @FindBy(how = How.XPATH, xpath = "//button[@type='submit']")
     @Getter
     private WebElement submitUpdatingButton;
 
+    public void updating (String name, String email) {
+        getUpdateName().sendKeys(del + name);
+        getUpdateEmail().sendKeys(del + email);
+        getSubmitUpdatingButton().click();
+    }
 }
